@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Utility Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Smart Utility Dashboard</h1>
+
+    <!-- Feature Selector -->
+    <select id="feature" onchange="selectFeature()">
+      <option value="">Select Feature</option>
+      <option value="calculator">Calculator</option>
+      <option value="currency">Currency Converter</option>
+      <option value="unit">Unit Converter</option>
+      <option value="grade">Grade Checker</option>
+      <option value="theme">Theme Switcher</option>
+    </select>
+
+    <!-- Calculator -->
+    <div class="card" id="calculator">
+      <h2>Calculator</h2>
+      <input type="number" id="num1" placeholder="Number 1">
+      <input type="number" id="num2" placeholder="Number 2">
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <button onclick="calculate()">Calculate</button>
+      <p id="calcResult"></p>
+    </div>
+
+    <!-- Currency Converter -->
+    <div class="card" id="currency">
+      <h2>Currency Converter (INR)</h2>
+      <input type="number" id="amount" placeholder="Enter Amount">
+      <select id="currencyType">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+      <button onclick="convertCurrency()">Convert</button>
+      <p id="currencyResult"></p>
+    </div>
+
+    <!-- Unit Converter -->
+    <div class="card" id="unit">
+      <h2>Unit Converter</h2>
+      <input type="number" id="unitValue" placeholder="Enter value">
+      <select id="unitType">
+        <option value="cm-m">CM → Meter</option>
+        <option value="kg-g">KG → Gram</option>
+      </select>
+      <button onclick="convertUnit()">Convert</button>
+      <p id="unitResult"></p>
+    </div>
+
+    <!-- Grade Checker -->
+    <div class="card" id="grade">
+      <h2>Grade Checker</h2>
+      <input type="number" id="marks" placeholder="Enter Marks">
+      <button onclick="checkGrade()">Check Grade</button>
+      <p id="gradeResult"></p>
+    </div>
+
+    <!-- Theme Switcher -->
+    <div class="card" id="theme">
+      <h2>Theme Switcher</h2>
+      <button onclick="changeTheme('light')">Light</button>
+      <button onclick="changeTheme('dark')">Dark</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
