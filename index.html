@@ -18,19 +18,20 @@
       <option value="currency">Currency Converter</option>
       <option value="unit">Unit Converter</option>
       <option value="grade">Grade Checker</option>
+      <option value="electricity">Electricity Bill</option>
       <option value="theme">Theme Switcher</option>
     </select>
 
     <!-- Calculator -->
     <div class="card" id="calculator">
-      <h2>Calculator</h2>
+      <h2>🧮 Calculator</h2>
       <input type="number" id="num1" placeholder="Number 1">
       <input type="number" id="num2" placeholder="Number 2">
       <select id="operator">
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
-        <option value="/">/</option>
+        <option value="/">/option>
       </select>
       <button onclick="calculate()">Calculate</button>
       <p id="calcResult"></p>
@@ -38,8 +39,8 @@
 
     <!-- Currency Converter -->
     <div class="card" id="currency">
-      <h2>Currency Converter (INR)</h2>
-      <input type="number" id="amount" placeholder="Enter Amount">
+      <h2>💱 Currency Converter</h2>
+      <input type="number" id="amount" placeholder="Amount in INR">
       <select id="currencyType">
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
@@ -51,8 +52,8 @@
 
     <!-- Unit Converter -->
     <div class="card" id="unit">
-      <h2>Unit Converter</h2>
-      <input type="number" id="unitValue" placeholder="Enter value">
+      <h2>📐 Unit Converter</h2>
+      <input type="number" id="unitValue" placeholder="Enter Value">
       <select id="unitType">
         <option value="cm-m">CM → Meter</option>
         <option value="kg-g">KG → Gram</option>
@@ -63,17 +64,26 @@
 
     <!-- Grade Checker -->
     <div class="card" id="grade">
-      <h2>Grade Checker</h2>
+      <h2>🎓 Grade Checker</h2>
       <input type="number" id="marks" placeholder="Enter Marks">
       <button onclick="checkGrade()">Check Grade</button>
       <p id="gradeResult"></p>
     </div>
 
+    <!-- Electricity Bill -->
+    <div class="card" id="electricity">
+      <h2>⚡ Electricity Bill Calculator</h2>
+      <input type="number" id="electricUnits" placeholder="Units Consumed">
+      <input type="number" id="unitRate" placeholder="Rate per Unit (₹)">
+      <button onclick="calculateElectricityBill()">Calculate Bill</button>
+      <p id="billResult"></p>
+    </div>
+
     <!-- Theme Switcher -->
     <div class="card" id="theme">
-      <h2>Theme Switcher</h2>
-      <button onclick="changeTheme('light')">Light</button>
-      <button onclick="changeTheme('dark')">Dark</button>
+      <h2>🎨 Theme Switcher</h2>
+      <button onclick="changeTheme('light')">Light Mode</button>
+      <button onclick="changeTheme('dark')">Dark Mode</button>
     </div>
 
   </div>
@@ -81,5 +91,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
 
